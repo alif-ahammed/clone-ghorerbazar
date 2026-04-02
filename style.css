@@ -1,0 +1,343 @@
+/* --- Google Fonts (Optional but recommended for Ghorer Bazar look) --- */
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.main-header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* --- Hamburger Icon (Desktop e hide thakbe) --- */
+.hamburger {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #444;
+}
+
+/* --- Logo Section --- */
+.header-logo {
+  flex-shrink: 0;
+}
+
+.logo-img {
+  width: 115px;
+  height: auto;
+  display: block;
+}
+
+/* --- Search Section --- */
+.search-section {
+  position: relative;
+  flex-grow: 1; /* Search bar ke center e boro korar jonno */
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 45px 10px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #e67e22;
+}
+
+.search-btn {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #777;
+}
+
+/* --- Action List --- */
+.action-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+.action-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #444;
+  transition: 0.3s;
+}
+
+.action-link i {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.action-text {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.action-link:hover {
+  color: #e67e22;
+}
+
+/* --- Cart Badge --- */
+.icon-wrapper {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #e67e22;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* --- Category Nav --- */
+.category-nav {
+  background-color: #031411;
+  padding: 8px 0;
+  width: 100%;
+}
+
+.category-nav .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-links li a:hover {
+  color: #f39c12;
+}
+
+.flash-btn {
+  background-color: #ffffff;
+  color: #e67e22;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* --- Mobile Menu (Sidebar) --- */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background: #fff;
+  z-index: 3000;
+  transform: translateX(-100%);
+  transition: 0.3s ease-in-out;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-sidebar.active {
+  transform: translateX(0);
+}
+
+.menu-header {
+  padding: 20px;
+  background: #031411;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-links {
+  list-style: none;
+  padding: 20px;
+}
+
+.mobile-links li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-links li a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.overlay-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 2500;
+}
+
+.overlay-bg.active {
+  display: block;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 991px) {
+  .search-section {
+    width: 40%;
+  }
+  .action-text {
+    display: none; /* Icon shudhu thakbe */
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Mobile e show korbe */
+  }
+
+  .nav-container {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+
+  .header-logo {
+    order: 2; /* Logo middle e ashbe */
+  }
+
+  .hamburger {
+    order: 1; /* Hamburger left e */
+  }
+  display .action-list {
+    gap: 10px;
+  }
+  .action-list {
+    order: 4;
+  }
+  .search-section {
+    width: 35%;
+    margin-top: 10px;
+    order: 3;
+  }
+
+  .category-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .search-section {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+/* Container ke relative kora jate dropdown thik niche thake */
+.more-menu {
+  position: relative;
+}
+
+.more-dropdown {
+  position: absolute;
+  top: 120%; /* Icon theke ektu niche */
+  right: 0;
+  width: 180px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  list-style: none;
+  padding: 10px 0;
+  display: none; /* Default e bondho thakbe */
+  z-index: 1001;
+  text-align: left;
+}
+
+/* Menu open class (JS diye toggle hobe) */
+.more-dropdown.show {
+  display: block;
+}
+
+.more-dropdown li {
+  padding: 0;
+}
+
+.more-dropdown li a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.2s;
+}
+
+.more-dropdown li a:hover {
+  background-color: #f8f8f8;
+  color: #e67e22;
+}
+
+.more-dropdown li a i {
+  font-size: 16px;
+  width: 20px; /* Icon gulo align rakhar jonno */
+}

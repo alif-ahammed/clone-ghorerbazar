@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ghorer Bazar Clone | Pure Organic Products</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="images/logo/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="nav-container">
+        <div class="hamburger" id="hamburger">
+          <i class="fi fi-br-menu-burger"></i>
+        </div>
+
+        <div class="header-logo">
+          <a href="/">
+            <img
+              src="images/logo/ghorerbazar.png"
+              alt="Ghorer Bazar Logo"
+              class="logo-img"
+            />
+          </a>
+        </div>
+
+        <div class="search-section">
+          <input
+            type="text"
+            placeholder="Search in..."
+            class="search-input"
+            id="mainSearch"
+          />
+          <button type="button" class="search-btn" aria-label="Search">
+            <i class="fi fi-rs-search"></i>
+          </button>
+        </div>
+
+        <ul class="action-list">
+          <li class="action-item hide-on-mobile">
+            <a href="#" class="action-link">
+              <i class="fi fi-rr-marker"></i>
+              <span class="action-text">Track Order</span>
+            </a>
+          </li>
+          <li class="action-item hide-on-mobile">
+            <a href="#" class="action-link">
+              <i class="fi fi-rr-user"></i>
+              <span class="action-text">Sign In</span>
+            </a>
+          </li>
+          <li class="action-item hide-on-mobile">
+            <a href="#" class="action-link">
+              <i class="fi fi-rs-heart"></i>
+              <span class="action-text">Wishlist</span>
+            </a>
+          </li>
+          <li class="action-item">
+            <a href="#" class="action-link cart-link">
+              <div class="icon-wrapper">
+                <i class="fi fi-rs-shopping-cart"></i>
+                <span class="cart-count">0</span>
+              </div>
+              <span class="action-text">Cart</span>
+            </a>
+          </li>
+
+          <li class="action-item more-menu hide-on-mobile" id="moreMenuBtn">
+            <a href="#" class="action-link">
+              <i class="fi fi-sr-bars-sort"></i>
+              <span class="action-text">More</span>
+            </a>
+
+            <ul class="more-dropdown" id="moreDropdown">
+              <li>
+                <a href="#"><i class="fi fi-rr-info"></i> About Us</a>
+              </li>
+              <li>
+                <a href="#"><i class="fi fi-rs-heart"></i> Wishlists</a>
+              </li>
+              <li>
+                <a href="#"><i class="fi fi-rr-interrogation"></i> Faqs</a>
+              </li>
+              <li>
+                <a href="#"><i class="fi fi-rr-phone-call"></i> Call Us</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- <li class="action-item hide-on-mobile">
+            <a href="#" class="action-link">
+              <i class="fi fi-sr-bars-sort"></i>
+              <span class="action-text">More</span>
+            </a>
+          </li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <div class="category-nav">
+      <div class="container">
+        <ul class="nav-links">
+          <li>
+            <a href="#">Honey <i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a href="#">Dates <i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a href="#">Spices <i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li>
+            <a href="#"
+              >Nuts & Seeds <i class="fa-solid fa-chevron-down"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#">Beverage <i class="fa-solid fa-chevron-down"></i></a>
+          </li>
+          <li><a href="#">Rice</a></li>
+          <li>
+            <a href="#"
+              >Flours & Lentils <i class="fa-solid fa-chevron-down"></i
+            ></a>
+          </li>
+          <li><a href="#">Certified</a></li>
+          <li><a href="#">Pickle</a></li>
+        </ul>
+
+        <div class="flash-sale">
+          <a href="#" class="flash-btn">
+            <i class="fa-solid fa-bolt"></i> FLASH SALE
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-sidebar" id="mobileMenu">
+      <div class="menu-header">
+        <span class="menu-logo">MENU</span>
+        <div class="close-btn" id="closeBtn">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <ul class="mobile-links">
+        <li>
+          <a href="#"><i class="fi fi-rr-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="#"><i class="fi fi-rr-shop"></i> Honey</a>
+        </li>
+        <li>
+          <a href="#"><i class="fi fi-rr-shop"></i> Dates</a>
+        </li>
+        <li>
+          <a href="#"><i class="fi fi-rr-shop"></i> Spices</a>
+        </li>
+        <li>
+          <a href="#"><i class="fi fi-rr-settings"></i> Account Settings</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="overlay-bg" id="overlay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
