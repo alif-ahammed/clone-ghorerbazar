@@ -1,4 +1,3 @@
-/* --- Google Fonts (Optional but recommended for Ghorer Bazar look) --- */
 @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap");
 
 * {
@@ -24,7 +23,6 @@
   gap: 20px;
 }
 
-/* --- Hamburger Icon (Desktop e hide thakbe) --- */
 .hamburger {
   display: none;
   font-size: 22px;
@@ -32,7 +30,6 @@
   color: #444;
 }
 
-/* --- Logo Section --- */
 .header-logo {
   flex-shrink: 0;
 }
@@ -43,10 +40,9 @@
   display: block;
 }
 
-/* --- Search Section --- */
 .search-section {
   position: relative;
-  flex-grow: 1; /* Search bar ke center e boro korar jonno */
+  flex-grow: 1;
   max-width: 600px;
   display: flex;
   align-items: center;
@@ -76,7 +72,6 @@
   color: #777;
 }
 
-/* --- Action List --- */
 .action-list {
   display: flex;
   align-items: center;
@@ -107,7 +102,6 @@
   color: #e67e22;
 }
 
-/* --- Cart Badge --- */
 .icon-wrapper {
   position: relative;
 }
@@ -124,7 +118,6 @@
   font-weight: bold;
 }
 
-/* --- Category Nav --- */
 .category-nav {
   background-color: #031411;
   padding: 8px 0;
@@ -176,7 +169,6 @@
   gap: 5px;
 }
 
-/* --- Mobile Menu (Sidebar) --- */
 .mobile-sidebar {
   position: fixed;
   top: 0;
@@ -236,19 +228,18 @@
   display: block;
 }
 
-/* --- Responsiveness --- */
 @media (max-width: 991px) {
   .search-section {
     width: 40%;
   }
   .action-text {
-    display: none; /* Icon shudhu thakbe */
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
   .hamburger {
-    display: block; /* Mobile e show korbe */
+    display: block;
   }
 
   .nav-container {
@@ -257,11 +248,11 @@
   }
 
   .header-logo {
-    order: 2; /* Logo middle e ashbe */
+    order: 2;
   }
 
   .hamburger {
-    order: 1; /* Hamburger left e */
+    order: 1;
   }
   display .action-list {
     gap: 10px;
@@ -292,14 +283,13 @@
   }
 }
 
-/* Container ke relative kora jate dropdown thik niche thake */
 .more-menu {
   position: relative;
 }
 
 .more-dropdown {
   position: absolute;
-  top: 120%; /* Icon theke ektu niche */
+  top: 120%;
   right: 0;
   width: 180px;
   background: #fff;
@@ -307,12 +297,11 @@
   border-radius: 8px;
   list-style: none;
   padding: 10px 0;
-  display: none; /* Default e bondho thakbe */
+  display: none;
   z-index: 1001;
   text-align: left;
 }
 
-/* Menu open class (JS diye toggle hobe) */
 .more-dropdown.show {
   display: block;
 }
@@ -339,10 +328,8 @@
 
 .more-dropdown li a i {
   font-size: 16px;
-  width: 20px; /* Icon gulo align rakhar jonno */
+  width: 20px;
 }
-
-/* sub menu */
 
 .honey-submenu,
 .dates-submenu,
@@ -350,7 +337,7 @@
 .nuts-seeds-submenu,
 .beverage-submenu,
 .flours-lentils-submenu {
-  display: none; /* Initially hide */
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -383,6 +370,7 @@
 .beverage-menu,
 .flours-lentils-menu {
   position: relative;
+  display: block;
 }
 
 .honey-menu:hover .honey-submenu,
@@ -394,24 +382,59 @@
   display: block;
 }
 
-/* slider section */
+@media (max-width: 768px) {
+  .honey-menu,
+  .dates-menu,
+  .spices-menu,
+  .nuts-seeds-menu,
+  .beverage-menu,
+  .flours-lentils-menu {
+    position: relative;
+    display: block;
+  }
+
+  .honey-submenu,
+  .dates-submenu,
+  .spices-submenu,
+  .nuts-seeds-submenu,
+  .beverage-submenu,
+  .flours-lentils-submenu {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    background-color: #031411;
+    min-width: 220px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    list-style: none;
+    border-radius: 15px;
+  }
+
+  .nav-links {
+    height: auto;
+  }
+
+  /* .mobile-links > li > a {
+    color: red !important;
+  } */
+}
 
 .hero-slider {
   position: relative;
-  overflow: hidden; /* Bairer slide gulo hide thakbe */
+  overflow: hidden;
 }
 
 .slider-wrapper {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Smooth slide effect */
+  transition: transform 0.5s ease-in-out;
   width: 100%;
 }
 
 .slide {
-  min-width: 100%; /* Protita slide purno jayga nibe */
+  min-width: 100%;
 }
 
-/* Dots styling */
 .dots-container {
   position: absolute;
   bottom: 15px;
@@ -429,18 +452,17 @@
 }
 
 .dot.active {
-  background-color: #f39c12; /* Active dot color */
+  background-color: #f39c12;
 }
 
 .hero-container {
   display: flex;
-  gap: 20px; /* Duita div er majhe faka */
+  gap: 20px;
   padding: 20px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* Slider-ke 70% jayga deya holo */
 .hero-slider {
   flex: 7;
   position: relative;
@@ -448,7 +470,6 @@
   overflow: hidden;
 }
 
-/* Banner-ke 30% jayga deya holo */
 .hero-banner {
   flex: 3;
   border-radius: 10px;
@@ -459,10 +480,9 @@
 .hero-banner img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Image jeno stretch na hoy */
+  object-fit: cover;
 }
 
-/* Navigation Buttons Styling */
 .prev,
 .next {
   position: absolute;
@@ -484,11 +504,9 @@
 
 @media (max-width: 768px) {
   .hero-banner {
-    display: none; /* Mobile e banner hide kore slider ke full width deya */
+    display: none;
   }
 }
-
-/* category slider */
 
 .featured-categories {
   padding: 60px 0;
@@ -504,20 +522,19 @@
 
 .slider-container {
   position: relative;
-  max-width: 1400px; /* Container width */
+  max-width: 1400px;
   margin: 0 auto;
-  overflow: hidden; /* Bairer item lukiye rakhbe */
+  overflow: hidden;
 }
 
 .slider-track {
   display: flex;
-  gap: 15px; /* Item-er majhe gap */
+  gap: 15px;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
 }
 
 .category-card {
-  /* 8-ta item dekhanor calculation: (100% / 8 items) - gap logic */
   flex: 0 0 calc((100% / 8) - 13.5px);
   min-width: calc((100% / 8) - 13.5px);
   box-sizing: border-box;
@@ -548,7 +565,6 @@
   color: #333;
 }
 
-/* Nav Buttons */
 .nav-btn {
   position: absolute;
   top: 50%;
@@ -617,7 +633,7 @@
   background: #fff;
   border-radius: 10px;
   display: flex;
-  width: calc(50% - 20px); /* 2 items per row */
+  width: calc(50% - 20px);
   padding: 20px;
   position: relative;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -628,7 +644,6 @@
   transform: translateY(-5px);
 }
 
-/* Badge Logic */
 .badge {
   position: absolute;
   top: 10px;
@@ -732,10 +747,9 @@
   background: var(--secondary-color);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .product-card {
-    width: 100%; /* Single column on mobile */
+    width: 100%;
     flex-direction: column;
     text-align: center;
     font-size: 14px;
@@ -756,7 +770,7 @@
 
 @media (max-width: 425px) {
   .product-card {
-    width: calc(50% - 10px); /* Single column on mobile */
+    width: calc(50% - 10px);
     flex-direction: column;
     text-align: center;
   }
@@ -785,7 +799,7 @@
 }
 
 .custom-container {
-  max-width: 1400px; /* Apnar chawa onujayi */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 15px;
   box-sizing: border-box;
@@ -814,7 +828,7 @@
   left: 0;
   width: 70px;
   height: 3px;
-  background-color: #f39c12; /* Orange Line */
+  background-color: #f39c12;
 }
 
 .see-all {
@@ -836,7 +850,7 @@
 }
 
 .brand-card {
-  flex: 0 0 calc((100% / 4) - 15px); /* Desktop-e 4 ta item */
+  flex: 0 0 calc((100% / 4) - 15px);
   border: 1px solid #f1f1f1;
   border-radius: 10px;
   height: 120px;
@@ -876,7 +890,6 @@
   border-radius: 10px;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .brand-card {
     flex: 0 0 calc((100% / 3) - 14px);
@@ -936,7 +949,7 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background-color: #f39c12; /* Brand Orange */
+  background-color: #f39c12;
 }
 
 .view-all {
@@ -954,7 +967,7 @@
 
 .h-card {
   flex: 1;
-  min-width: calc(20% - 12px); /* 5 items in a row */
+  min-width: calc(20% - 12px);
   border: 1px solid #eee;
   border-radius: 5px;
   padding: 15px;
@@ -970,7 +983,6 @@
   border-color: #f39c12;
 }
 
-/* Badge Styles */
 .badge-container {
   display: flex;
   justify-content: space-between;
@@ -991,10 +1003,10 @@
 
 .save {
   background-color: #27ae60;
-} /* Green */
+}
 .orange {
   background-color: #e67e22;
-} /* Orange */
+}
 
 .h-image {
   text-align: center;
@@ -1011,7 +1023,7 @@
   font-size: 15px;
   color: #333;
   margin-bottom: 10px;
-  height: 40px; /* Text alignment fix */
+  height: 40px;
 }
 
 .h-price {
@@ -1048,7 +1060,6 @@
   color: #fff;
 }
 
-/* Responsive Logic */
 @media (max-width: 1200px) {
   .h-card {
     min-width: calc(33.33% - 10px);
@@ -1074,15 +1085,15 @@
 .h-dot {
   height: 10px;
   width: 10px;
-  background-color: #e0e0e0; /* Inactive color (Grey) */
+  background-color: #e0e0e0;
   border-radius: 50%;
   display: inline-block;
   margin: 0 6px;
-  cursor: default; /* Kaj korbe na tai normal cursor */
+  cursor: default;
 }
 
 .h-dot-active {
-  background-color: #f39c12; /* Brand Orange */
-  width: 28px; /* Screenshot-er moto ektu lomba */
+  background-color: #f39c12;
+  width: 28px;
   border-radius: 12px;
 }

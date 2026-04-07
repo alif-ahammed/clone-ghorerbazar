@@ -3,22 +3,19 @@ const closeBtn = document.getElementById("closeBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 const overlay = document.getElementById("overlay");
 
-// Open Menu
 hamburger.addEventListener("click", () => {
   mobileMenu.classList.add("active");
   overlay.classList.add("active");
 });
 
-// Close Menu
 const closeMenu = () => {
   mobileMenu.classList.remove("active");
   overlay.classList.remove("active");
 };
 
 closeBtn.addEventListener("click", closeMenu);
-overlay.addEventListener("click", closeMenu); // Background-e click korle bondho hobe
+overlay.addEventListener("click", closeMenu);
 
-// Dropdown Toggle Logic
 const moreMenuBtn = document.getElementById("moreMenuBtn");
 const moreDropdown = document.getElementById("moreDropdown");
 
@@ -27,9 +24,29 @@ moreMenuBtn.addEventListener("click", function (e) {
   moreDropdown.classList.toggle("show");
 });
 
-// Screen-er onno kothao click korle jate dropdown bondho hoye jay
 window.addEventListener("click", function (e) {
   if (!moreMenuBtn.contains(e.target)) {
     moreDropdown.classList.remove("show");
   }
 });
+
+// document.querySelectorAll(".nav-links > li > a").forEach((menuLink) => {
+//   menuLink.addEventListener("click", function (e) {
+//     const parentLi = this.parentElement;
+//     const subMenu = parentLi.querySelector("ul");
+
+//     if (subMenu) {
+//       e.preventDefault(); // Link click hole page reload hoye jabe na
+
+//       // ACTIVE class toggle korbe (on/off korbe)
+//       parentLi.classList.toggle("active");
+
+//       // Ekta khola thakle baki gulo bondho korte chaile (Optional):
+//       document.querySelectorAll(".nav-links > li").forEach((otherLi) => {
+//         if (otherLi !== parentLi) {
+//           otherLi.classList.remove("active");
+//         }
+//       });
+//     }
+//   });
+// });

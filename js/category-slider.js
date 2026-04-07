@@ -1,4 +1,4 @@
-let currentIdx = 0; // Agertar sathe conflict na hoyar jonno variable change kora holo
+let currentIdx = 0;
 const sliderTrack = document.getElementById("sliderTrack");
 
 function moveSlidec(direction) {
@@ -20,12 +20,10 @@ function moveSlidec(direction) {
   sliderTrack.style.transform = `translateX(-${currentIdx * cardWidth}px)`;
 }
 
-// ৪ সেকেন্ড পর পর অটো স্লাইড
 let autoSlideC = setInterval(() => {
   moveSlidec(1);
 }, 4000);
 
-// Mouse thakle pause
 const sliderCont = document.querySelector(".slider-container");
 sliderCont.addEventListener("mouseenter", () => clearInterval(autoSlideC));
 sliderCont.addEventListener("mouseleave", () => {
