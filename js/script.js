@@ -50,3 +50,26 @@ window.addEventListener("click", function (e) {
 //     }
 //   });
 // });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("seeMoreBtn");
+  const textWrapper = document.querySelector(".text-content");
+
+  if (btn && textWrapper) {
+    // ১. চেক করা কন্টেন্ট কি ২ লাইনের বেশি?
+    if (textWrapper.scrollHeight > textWrapper.clientHeight) {
+      btn.style.display = "inline"; // ২ লাইনের বেশি হলে বাটন দেখাবে
+    }
+
+    // ২. ক্লিক ইভেন্ট
+    btn.addEventListener("click", function () {
+      textWrapper.classList.toggle("expanded");
+
+      if (textWrapper.classList.contains("expanded")) {
+        btn.innerText = " See Less";
+      } else {
+        btn.innerText = "... See More";
+      }
+    });
+  }
+});

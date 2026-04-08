@@ -1097,3 +1097,375 @@
   width: 28px;
   border-radius: 12px;
 }
+
+.testimonial-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.testimonial-card {
+  padding: 20px;
+  border: 1px solid #666;
+  border-radius: 10px;
+  width: 400px;
+  margin: 15px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.author-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .testimonial-card {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 333px;
+  }
+  .testimonial-card:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .testimonial-card {
+    width: 333px;
+  }
+  .testimonial-card:nth-child(2) {
+    display: none;
+  }
+  .testimonial-card:last-child {
+    display: none;
+  }
+  .testimonial-container {
+    justify-content: center;
+  }
+}
+
+/* #seeMoreBtn {
+  display: none; 
+  background: none;
+  border: none;
+  color: #ff6600;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.text-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+  max-height: 3em; 
+}
+
+.text-content.expanded {
+  display: block;
+  -webkit-line-clamp: initial;
+  max-height: none;
+} */
+
+.text-content {
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* শুরুতে ২ লাইন */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* যখন এক্সপান্ড হবে */
+.text-content.expanded {
+  display: block; /* বক্সে থেকে নরমাল ব্লকে ফিরে আসবে */
+  -webkit-line-clamp: initial;
+}
+
+#seeMoreBtn {
+  color: #ff6600;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline; /* টেক্সটের সাথেই থাকবে */
+  margin-left: 5px;
+}
+
+.site-footer {
+  padding: 60px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #555;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+
+.footer-container {
+  max-width: 1400px; /* আপনার রিকোয়েস্ট অনুযায়ী */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.footer-brand {
+  flex: 1.2;
+  min-width: 300px;
+  margin-right: 50px;
+}
+
+.footer-links-grid {
+  flex: 2.5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 150px;
+  margin-right: 12px;
+}
+
+.logo h2 {
+  color: #f16522;
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+
+.description {
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.contact-info li {
+  margin-bottom: 12px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info li i {
+  width: 25px;
+  color: #f16522;
+}
+
+.social-links a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: #fdf2ed;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  color: #f16522;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #f16522;
+  color: #fff;
+}
+
+.app-downloads {
+  margin-top: 35px;
+}
+
+.app-downloads p {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.apps img {
+  height: 42px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.footer-column h3 {
+  color: #333;
+  font-size: 19px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 14px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14.5px;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #f16522;
+  padding-left: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .footer-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-brand {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  .footer-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.copyright-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  padding: 0px 15px;
+}
+.copyright-text {
+  align-items: center;
+}
+
+.payment-image {
+  width: 50%;
+  height: auto;
+}
+
+.payment-image img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .copyright-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+  .copyright-text {
+    order: 2;
+    padding-bottom: 20px;
+  }
+  .payment-image {
+    width: 80%;
+    height: auto;
+  }
+}
+
+.mobile-sticky-nav {
+  display: none;
+}
+
+@media (max-width: 425px) {
+  .mobile-sticky-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #f16522;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-item {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .nav-item i {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .nav-item span {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .icon-wrapper {
+    position: relative;
+  }
+
+  .cart-count {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    background-color: #2c3e50;
+    color: #fff;
+    font-size: 10px;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    border: 2px solid #f16522;
+  }
+}
