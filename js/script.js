@@ -30,38 +30,15 @@ window.addEventListener("click", function (e) {
   }
 });
 
-// document.querySelectorAll(".nav-links > li > a").forEach((menuLink) => {
-//   menuLink.addEventListener("click", function (e) {
-//     const parentLi = this.parentElement;
-//     const subMenu = parentLi.querySelector("ul");
-
-//     if (subMenu) {
-//       e.preventDefault(); // Link click hole page reload hoye jabe na
-
-//       // ACTIVE class toggle korbe (on/off korbe)
-//       parentLi.classList.toggle("active");
-
-//       // Ekta khola thakle baki gulo bondho korte chaile (Optional):
-//       document.querySelectorAll(".nav-links > li").forEach((otherLi) => {
-//         if (otherLi !== parentLi) {
-//           otherLi.classList.remove("active");
-//         }
-//       });
-//     }
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("seeMoreBtn");
   const textWrapper = document.querySelector(".text-content");
 
   if (btn && textWrapper) {
-    // ১. চেক করা কন্টেন্ট কি ২ লাইনের বেশি?
     if (textWrapper.scrollHeight > textWrapper.clientHeight) {
-      btn.style.display = "inline"; // ২ লাইনের বেশি হলে বাটন দেখাবে
+      btn.style.display = "inline";
     }
 
-    // ২. ক্লিক ইভেন্ট
     btn.addEventListener("click", function () {
       textWrapper.classList.toggle("expanded");
 

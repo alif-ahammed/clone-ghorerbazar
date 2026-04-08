@@ -414,10 +414,6 @@
   .nav-links {
     height: auto;
   }
-
-  /* .mobile-links > li > a {
-    color: red !important;
-  } */
 }
 
 .hero-slider {
@@ -1160,43 +1156,16 @@
   }
 }
 
-/* #seeMoreBtn {
-  display: none; 
-  background: none;
-  border: none;
-  color: #ff6600;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 0;
-  margin-top: 5px;
-}
-
 .text-content {
+  line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  line-height: 1.5;
-  max-height: 3em; 
 }
 
 .text-content.expanded {
   display: block;
-  -webkit-line-clamp: initial;
-  max-height: none;
-} */
-
-.text-content {
-  line-height: 1.5;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* শুরুতে ২ লাইন */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* যখন এক্সপান্ড হবে */
-.text-content.expanded {
-  display: block; /* বক্সে থেকে নরমাল ব্লকে ফিরে আসবে */
   -webkit-line-clamp: initial;
 }
 
@@ -1204,7 +1173,7 @@
   color: #ff6600;
   cursor: pointer;
   font-weight: bold;
-  display: inline; /* টেক্সটের সাথেই থাকবে */
+  display: inline;
   margin-left: 5px;
 }
 
@@ -1217,7 +1186,7 @@
 }
 
 .footer-container {
-  max-width: 1400px; /* আপনার রিকোয়েস্ট অনুযায়ী */
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -1467,5 +1436,8 @@
     align-items: center;
     padding: 2px;
     border: 2px solid #f16522;
+  }
+  .copyright-container {
+    padding-bottom: 65px;
   }
 }
